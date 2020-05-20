@@ -1,4 +1,13 @@
-const inter = require('./LagrangeInterpolation.js').LagrangeInterpolation;
+const SecretShareGenerator = require('./SSS.js').SecretShareGenerator;
+const LagrangeInterpolation = require('./LagrangeInterpolation.js').LagrangeInterpolation;
+const prompt = require('prompt-sync')({sigint: true});
 
-var equation = new inter(1,9285275391624,2,27078320587385,3,53079135586964);
-console.log(equation.valueOfCoef());
+
+// const num = prompt('Enter a number: ');
+// console.log('Your number + 4 =');
+// console.log(Number(num) + 4);
+
+
+
+let a = new SecretShareGenerator("t");
+console.log(a.finalPoints)
